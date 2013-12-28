@@ -1,3 +1,5 @@
 *.pyc
+local
+sqlite3.db*
+static
 tmp
-sqlite3.db
