@@ -19,6 +19,6 @@ mkdir -p $docroot
 cp -va $scriptsdir/template/* $docroot/ || :
 cat $scriptsdir/template/passenger_wsgi.py | sed \
     -e "s/^\(projectname =\).*/\1 '$projectname'/" \
-    -e "s/.prod_settings/.$releasename"_settings/ \
+    -e "s/^\(releasename =\).*/\1 '$releasename'/" \
     -e "s?^\(virtualenv_root =\).*?\1 '$virtualenv'?" \
     > $docroot/passenger_wsgi.py
