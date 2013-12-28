@@ -1,4 +1,4 @@
-projectname = 'bashoneliners'
+projectname = 'djbootstrap'
 releasename = 'beta'
 virtualenv_root = '/path/to/virtualenv/' + projectname
 
