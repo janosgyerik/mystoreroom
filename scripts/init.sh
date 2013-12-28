@@ -2,12 +2,7 @@
 
 cd $(dirname "$0")/..
 
-virtualenv=$(. ./virtualenv.sh; echo $virtualenv)
-
-if test ! "$virtualenv"; then
-    projectname=$(basename "$PWD")
-    virtualenv=~/virtualenv/$projectname
-fi
+virtualenv=$(. ./virtualenv.sh 2>/dev/null; echo $virtualenv)
 
 if test ! -d $virtualenv; then
     echo virtualenv does not exist: $virtualenv
