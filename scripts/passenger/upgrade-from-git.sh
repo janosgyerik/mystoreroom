@@ -5,12 +5,8 @@
 
 cd $(dirname "$0")/..
 
-projectname=$(basename $(pwd))
-. ~/virtualenv/$projectname/bin/activate
+GIT_DIR=.git git pull --force
 
-unset GIT_DIR
-git checkout -f
-
-./manage.py collectstatic --noinput
+./manage.sh collectstatic --noinput
 
 touch ../tmp/restart.txt
