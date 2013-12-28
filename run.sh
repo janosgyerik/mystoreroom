@@ -3,4 +3,4 @@
 cd $(dirname "$0")
 . ./virtualenv.sh
 
-./manage.sh runserver 8008
+./manage.sh runserver 8008 $*
