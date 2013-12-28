@@ -3,7 +3,7 @@ from myproj.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.janosgyerik.com']
 
 DATABASES = {
     'default': {
