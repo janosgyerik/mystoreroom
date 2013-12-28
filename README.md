@@ -14,12 +14,12 @@ Creating a new clone
 2. Rename `djbootstrap` to your `newproj` everywhere:
 
         mv djbootstrap newproj
-        grep -rl djbootstrap . | grep -v ^./.git/ | xargs sed -i s/djbootstrap/newproj/g
+        grep -rl djbootstrap . | grep -v -e ^./.git/ -e .pyc$ | xargs sed -i s/djbootstrap/newproj/g
 
 3. Rename `myapp` to your `newapp` everywhere:
 
         mv myapp newapp
-        grep -rl myapp newapp | xargs sed -i s/myapp/newapp/g
+        grep -rl myapp . | grep -v -e ^./.git/ -e .pyc$ | xargs sed -i s/myapp/newapp/g
 
 4. Restart repo:
 
