@@ -1,5 +1,5 @@
 """
-Django settings for myproj project.
+Django settings for djbootstrap project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -47,9 +47,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'myproj.urls'
+ROOT_URLCONF = 'djbootstrap.urls'
 
-WSGI_APPLICATION = 'myproj.wsgi.application'
+WSGI_APPLICATION = 'djbootstrap.wsgi.application'
 
 
 # Database

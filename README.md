@@ -11,10 +11,10 @@ Creating a new clone
         git clone . /path/to/new
         cd /path/to/new
 
-2. Rename `myproj` to your `newproj` everywhere:
+2. Rename `djbootstrap` to your `newproj` everywhere:
 
-        mv myproj newproj
-        grep -rl myproj . | grep -v ^./.git/ | xargs sed -i s/myproj/newproj/g
+        mv djbootstrap newproj
+        grep -rl djbootstrap . | grep -v ^./.git/ | xargs sed -i s/djbootstrap/newproj/g
 
 3. Rename `myapp` to your `newapp` everywhere:
 

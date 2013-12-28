@@ -1,9 +1,7 @@
-from myproj.settings import *
+from djbootstrap.settings import *
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.janosgyerik.com']
 
 DATABASES = {
     'default': {
