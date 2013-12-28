@@ -16,7 +16,7 @@ pep8 $dirs | grep -v \
     -e E123 \
     -e E126 \
     -e E128 \
-    -e E501
+    -e E501 || :
 echo
 
 echo '###' pyflakes for: $dirs
