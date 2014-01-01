@@ -3,3 +3,10 @@ local
 sqlite3.db*
 static
 tmp
+
+# Intellij project files
+#*.iml
+#*.ipr
+#*.iws
+.idea
+*.iml
