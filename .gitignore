@@ -1,7 +1,7 @@
 *.pyc
 local
 sqlite3.db*
-static
+/static
 tmp
 
 # Intellij project files
