@@ -23,3 +23,5 @@ esc esc         switch to editor
 cmd 1           switch to project tool window
 cmd n           new file
 cmd shift up    move line up
+cmd w           close window
+cmd backspace   delete current line
