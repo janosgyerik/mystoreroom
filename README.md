@@ -18,8 +18,7 @@ Creating a new clone
 
 3. Rename `myapp` to your `newapp` everywhere:
 
-        mv myapp newapp
-        grep -rl myapp . | grep -v -e ^./.git/ -e .pyc$ | xargs sed -i s/myapp/newapp/g
+        ./scripts/rename-myapp.sh newapp
 
 4. Restart repo:
 
