@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'djbootstrap.views.home', name='home'),
 
     url(r'^bs3app/', include('bs3app.urls')),
-    url(r'^accounts/', include('accounts.urls')),
+    url(r'^login/', include('whitelist_auth.urls')),
     url(r'', include('social_auth.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

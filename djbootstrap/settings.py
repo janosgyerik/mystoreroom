@@ -37,8 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bs3app',
-    'accounts',
     'social_auth',
+    'whitelist_auth',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,7 +87,6 @@ STATIC_URL = '/static/'
 ### project specific custom settings
 
 AUTHENTICATION_BACKENDS = (
-        #'accounts.auth.WhitelistedOpenIDBackend',
         'social_auth.backends.twitter.TwitterBackend',
         'social_auth.backends.facebook.FacebookBackend',
         'social_auth.backends.google.GoogleOAuthBackend',
@@ -113,6 +112,9 @@ AUTHENTICATION_BACKENDS = (
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/login/'
 
+from whitelist_auth.auth import update_user_from_whitelisted_wrapper
+from django.contrib.auth.signals import user_logged_in
+user_logged_in.connect(update_user_from_whitelisted_wrapper)
