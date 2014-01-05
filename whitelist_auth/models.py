@@ -7,5 +7,9 @@ class Whitelisted(models.Model):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 
+    def summary(self):
+        return '%s active=%s staff=%s super=%s' % (
+                self.email, self.is_active, self.is_staff, self.is_superuser)
+
     def __unicode__(self):
         return self.email
