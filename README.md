@@ -14,11 +14,11 @@ Creating a new clone
 
 2. Rename `djbootstrap` to your `newproj` everywhere:
 
-        ./helper/rename-djbootstrap.sh
+        ./helper/rename-project.sh
 
 3. Rename `bs3app` to your `newapp` everywhere:
 
-        ./helper/rename-bs3app.sh newapp
+        ./helper/rename-app.sh newapp
 
 4. Get rid of helper scripts:
 
