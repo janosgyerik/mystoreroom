@@ -7,8 +7,8 @@ virtualenv=$(. ./virtualenv.sh 2>/dev/null; echo $virtualenv)
 if test ! -d $virtualenv; then
     echo virtualenv does not exist: $virtualenv
     printf "Create now? [Yn] "
-    read ans
-    if [ ! "$ans" ] || [[ $ans == [yY]* ]]; then
+    read answer
+    if [ ! "$answer" ] || [[ $answer == [yY]* ]]; then
         virtualenv --distribute $virtualenv || exit 1
     else
         exit 1
