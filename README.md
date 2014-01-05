@@ -31,7 +31,7 @@ Creating a new clone
 
         ./pip.sh install -r requirements.txt
         ./manage.sh syncdb --noinput
-        ./manage.sh whitelist --add you@example.com
+        ./manage.sh whitelist --add-admin you@example.com
 
 
 Updating a clone
