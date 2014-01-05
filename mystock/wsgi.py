@@ -1,5 +1,5 @@
 """
-WSGI config for inventoryman project.
+WSGI config for mystock project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "inventoryman.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mystock.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()

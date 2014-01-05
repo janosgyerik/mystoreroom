@@ -1,5 +1,5 @@
 """
-Django settings for inventoryman project.
+Django settings for mystock project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'inventoryman.urls'
+ROOT_URLCONF = 'mystock.urls'
 
-WSGI_APPLICATION = 'inventoryman.wsgi.application'
+WSGI_APPLICATION = 'mystock.wsgi.application'
 
 
 # Database

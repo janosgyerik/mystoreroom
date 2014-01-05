@@ -1,4 +1,4 @@
-projectname = 'inventoryman'
+projectname = 'mystock'
 releasename = 'beta'
 virtualenv_root = '/path/to/virtualenv/' + projectname
 

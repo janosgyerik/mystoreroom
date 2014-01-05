@@ -2,7 +2,7 @@
 
 test "$1" -a "$2" || {
     echo usage: $0 DOCROOT RELEASENAME
-    echo example: $0 '~/webapps/beta.inventoryman.com beta'
+    echo example: $0 '~/webapps/beta.mystock.com beta'
     exit 1
 }
 

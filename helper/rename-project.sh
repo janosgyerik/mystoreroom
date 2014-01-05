@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 test "$1" && proj=$1 || proj=$(cd $(dirname $0)/..; basename $PWD)
-oldprojname=inventoryman
+oldprojname=mystock
 
 files_to_rename() {
     grep -rl $oldprojname . 2>/dev/null | grep -v -e ^./.git/ -e .pyc$ -e ./.idea/

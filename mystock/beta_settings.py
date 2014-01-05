@@ -1,4 +1,4 @@
-from inventoryman.settings import *
+from mystock.settings import *
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
