@@ -16,7 +16,7 @@ Creating a new clone
 
         ./helper/rename-project.sh
 
-3. Rename `bs3app` to your `newapp` everywhere:
+3. Rename `stock` to your `newapp` everywhere:
 
         ./helper/rename-app.sh newapp
 

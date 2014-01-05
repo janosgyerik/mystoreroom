@@ -36,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bs3app',
+    'stock',
     'social_auth',
     'whitelist_auth',
 )
