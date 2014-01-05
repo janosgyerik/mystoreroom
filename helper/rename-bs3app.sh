@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 test "$1" && app=$1 || { echo usage: $0 newappname; exit 1; }
-oldappname=myapp
+oldappname=bs3app
 
 files_to_rename() {
     grep -rl $oldappname . 2>/dev/null | grep -v -e ^./.git/ -e .pyc$ -e ./.idea/
