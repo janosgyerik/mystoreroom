@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from stock.models import Item
+
+
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'buy_dt', 'expires_dt', )
+
+admin.site.register(Item, ItemAdmin)
