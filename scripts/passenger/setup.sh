@@ -12,7 +12,7 @@ releasename=$1; shift
 [[ $docroot == /* ]] || docroot=$PWD/$docroot
 
 scriptsdir=$(dirname "$0")
-. $scriptsdir/../../virtualenv.sh
+. $scriptsdir/../../virtualenv.sh || exit 1
 
 
 mkdir -p $docroot
