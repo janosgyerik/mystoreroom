@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'djbootstrap.views.home', name='home'),
 
+    url(r'^$', 'whitelist_auth.views.login', name='home'),
     url(r'^bs3app/', include('bs3app.urls')),
     url(r'^login/', include('whitelist_auth.urls')),
     url(r'', include('social_auth.urls')),
