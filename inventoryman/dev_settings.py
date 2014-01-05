@@ -1,4 +1,4 @@
-from djbootstrap.settings import *
+from inventoryman.settings import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

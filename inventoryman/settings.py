@@ -1,5 +1,5 @@
 """
-Django settings for djbootstrap project.
+Django settings for inventoryman project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'djbootstrap.urls'
+ROOT_URLCONF = 'inventoryman.urls'
 
-WSGI_APPLICATION = 'djbootstrap.wsgi.application'
+WSGI_APPLICATION = 'inventoryman.wsgi.application'
 
 
 # Database

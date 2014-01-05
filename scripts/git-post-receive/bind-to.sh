@@ -2,7 +2,7 @@
 
 test "$1" -a "$2" || {
     echo usage $0 REPO BRANCH
-    echo example: $0 '~/repos/git/releases/djbootstrap.git beta'
+    echo example: $0 '~/repos/git/releases/inventoryman.git beta'
     exit 1
 }
 

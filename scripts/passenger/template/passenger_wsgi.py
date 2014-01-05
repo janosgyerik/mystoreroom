@@ -1,4 +1,4 @@
-projectname = 'djbootstrap'
+projectname = 'inventoryman'
 releasename = 'beta'
 virtualenv_root = '/path/to/virtualenv/' + projectname
 
