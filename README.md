@@ -14,20 +14,24 @@ Creating a new clone
 
 2. Rename `djbootstrap` to your `newproj` everywhere:
 
-        ./scripts/rename-djbootstrap.sh
+        ./helper/rename-djbootstrap.sh
 
 3. Rename `myapp` to your `newapp` everywhere:
 
-        ./scripts/rename-myapp.sh newapp
+        ./helper/rename-myapp.sh newapp
 
-4. Restart repo:
+4. Get rid of helper scripts:
+
+        rm -r ./helper/
+
+5. Restart repo:
 
         rm -fr .git
         git init
         git remote rm origin
         git remote add origin newurl
 
-5. Setup project
+6. Setup project
 
         ./pip.sh install -r requirements.txt
         ./manage.sh syncdb --noinput
