@@ -113,7 +113,7 @@ AUTHENTICATION_BACKENDS = (
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
 
 from whitelist_auth.auth import update_user_from_whitelisted_wrapper
 from django.contrib.auth.signals import user_logged_in
