@@ -115,6 +115,5 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 
-from whitelist_auth.auth import update_user_from_whitelisted_wrapper
-from django.contrib.auth.signals import user_logged_in
-user_logged_in.connect(update_user_from_whitelisted_wrapper)
+from whitelist_auth.auth import require_whitelisted_wrapper
+require_whitelisted_wrapper()
