@@ -1,5 +1,6 @@
 from django.contrib.auth.signals import user_logged_in
 from django.contrib.auth import logout
+from django.dispatch import receiver
 
 from whitelist_auth.models import Whitelisted
 
@@ -20,6 +21,7 @@ def update_user_from_whitelisted(user, whitelisted):
         user.save()
 
 
+@receiver(user_logged_in)
 def update_user_from_whitelisted_wrapper(sender, user, request, **kwargs):
     whitelisted = get_whitelisted(user)
     if whitelisted:
@@ -27,5 +29,3 @@ def update_user_from_whitelisted_wrapper(sender, user, request, **kwargs):
     else:
         # TODO: redirect to authorization failed page
         logout(request)
-
-user_logged_in.connect(update_user_from_whitelisted_wrapper)
