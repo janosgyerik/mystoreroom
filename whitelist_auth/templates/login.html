@@ -18,15 +18,25 @@
           }
           .openid_btns a:hover {
               border: 2px solid #999;
-              border-radius: 5px;
-              -moz-border-radius: 5px;
-              -webkit-border-radius: 5px;
               box-shadow: none;
               -moz-box-shadow: none;
               -webkit-box-shadow: none;
           }
-          .openid_btns br {
-              clear: both;
+          .openid_large_btn {
+              background: #fff url(http://cdn.sstatic.net/Img/openid/openid-logos.png?v=8);
+              background-position: -1px -518px;
+          }
+          .openid_large_btn-stack-exchange {
+              background-position: -1px -518px;
+          }
+          .openid_large_btn-google {
+              background-position: -1px -1px;
+          }
+          .openid_large_btn-facebook {
+              background-position: -1px -456px;
+          }
+          .openid_large_btn-yahoo {
+              background-position: -1px -63px;
           }
         </style>
 
@@ -66,11 +76,11 @@
 
                 <div class="openid_btns">
                     <!--
-                    <a title="login with Stack Exchange" href="{% url "socialauth_begin" "stackexchange" %}?next={{ next|default:'' }}" style="background: #fff url(http://cdn.sstatic.net/Img/openid/openid-logos.png?v=8); background-position: -1px -518px" class="stack_exchange openid_large_btn"></a>
+                    <a title="login with Stack Exchange" href="{% url "socialauth_begin" "stackexchange" %}?next={{ next|default:'' }}" class="openid_large_btn openid_large_btn-stack_exchange"></a>
                     -->
-                    <a title="login with Google" href="{% url "socialauth_begin" "google" %}?next={{ next|default:'' }}" style="background: #fff url(http://cdn.sstatic.net/Img/openid/openid-logos.png?v=8); background-position: -1px -1px" class="google openid_large_btn"></a>
-                    <a title="login with Facebook" href="{% url "socialauth_begin" "facebook" %}?next={{ next|default:'' }}" style="background: #fff url(http://cdn.sstatic.net/Img/openid/openid-logos.png?v=8); background-position: -1px -456px" class="facebook openid_large_btn"></a>
-                    <a title="login with Yahoo" href="{% url "socialauth_begin" "yahoo" %}?next={{ next|default:'' }}" style="background: #fff url(http://cdn.sstatic.net/Img/openid/openid-logos.png?v=8); background-position: -1px -63px" class="yahoo openid_large_btn"></a>
+                    <a title="login with Google" href="{% url "socialauth_begin" "google" %}?next={{ next|default:'' }}" class="openid_large_btn openid_large_btn-google"></a>
+                    <a title="login with Facebook" href="{% url "socialauth_begin" "facebook" %}?next={{ next|default:'' }}" class="openid_large_btn openid_large_btn-facebook"></a>
+                    <a title="login with Yahoo" href="{% url "socialauth_begin" "yahoo" %}?next={{ next|default:'' }}" class="openid_large_btn openid_large_btn-yahoo"></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 well">
