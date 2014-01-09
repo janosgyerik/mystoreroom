@@ -24,20 +24,43 @@ Creating a new clone
 
         rm -r ./helper/
 
-5. Restart repo:
+5. Setup project
 
-        rm -fr .git
-        git init
-        git remote rm origin
-        git remote add origin newurl
-
-6. Setup project
-
-        ./pip.sh install -r requirements.txt
+        # create virtualenv and run install requirements
+        ./scripts/init.sh
         ./manage.sh syncdb --noinput
         ./manage.sh whitelist --add-admin you@example.com
 
 
-Updating a clone
-----------------
+Keep link with upstream project
+-------------------------------
+It can be a good idea to keep a link with the upstream project
+to be able to merge future improvements in the common scripts.
+
+    git remote add upstream url_to_upstream
+
+To merge the upstream changes:
+
+    git fetch upstream
+    git merge upstream/master
+
+
+Restart repo
+------------
+If you don't ever want to merge again from upstream to the new clone,
+you can reset the repository and get rid of all past history:
+
+    rm -fr .git
+    git init
+    git remote rm origin
+    git remote add origin newurl
+
+
+Setup deployment with passenger
+-------------------------------
+TODO
+
+
+Setup remote upgrades by git push
+---------------------------------
 TODO
