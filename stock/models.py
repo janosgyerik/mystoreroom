@@ -14,3 +14,6 @@ class Item(models.Model):
     expires_dt = models.DateTimeField(default=tomorrow)
     created_dt = models.DateTimeField(default=timezone.now, blank=True)
     updated_dt = models.DateTimeField(default=timezone.now, blank=True)
+
+    class Meta:
+        ordering = ('expires_dt',)
