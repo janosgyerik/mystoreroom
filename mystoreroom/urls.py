@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'mystoreroom.views.home', name='home'),
 
     url(r'^$', 'whitelist_auth.views.login', name='home'),
-    url(r'^stock/', include('stock.urls')),
+    url(r'^store/', include('store.urls')),
     url(r'^login/', include('whitelist_auth.urls')),
     url(r'', include('social_auth.urls')),
 

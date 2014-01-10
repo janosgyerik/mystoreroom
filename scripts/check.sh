@@ -3,7 +3,7 @@
 cd $(dirname "$0")/..
 
 # directories to scan for coding style violations
-dirs='djbootstrap stock'
+dirs='djbootstrap store'
 
 # E121 continuation line indentation is not a multiple of four
 # E123 closing bracket does not match indentation of opening bracket's line

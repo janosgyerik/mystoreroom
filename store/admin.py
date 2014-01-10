@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from stock.models import Item
+from store.models import Item
 
 
 class ItemAdmin(admin.ModelAdmin):

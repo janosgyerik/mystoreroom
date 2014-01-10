@@ -2,4 +2,4 @@
 
 cd $(dirname "$0")/..
 
-./manage.sh test stock
+./manage.sh test store
