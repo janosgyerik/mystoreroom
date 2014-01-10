@@ -25,10 +25,15 @@ class Item(models.Model):
 
 class Tag(models.Model):
     name = models.SlugField()
-    label = models.CharField(max_length=20)
+    label = models.CharField(max_length=20, blank=True)
 
     def __unicode__(self):
         return '%s (%s)' % (self.label, self.name)
+
+    def save(self, *args, **kwargs):
+        if not self.label:
+            self.label = self.name.title()
+        super(Tag, self).save(*args, **kwargs)
 
 
 class ItemTag(models.Model):
