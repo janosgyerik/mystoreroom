@@ -8,7 +8,7 @@ files_to_rename() {
 }
 files_to_rename
 
-echo -ne Ok to rename ./$oldappname to ./$app? '[Y/n] '
+printf "Ok to rename ./$oldappname to ./$app? [Y/n] "
 read answer
 if [ ! "$answer" ] || [[ $answer == [yY]* ]]; then
     mv -v ./$oldappname ./$app

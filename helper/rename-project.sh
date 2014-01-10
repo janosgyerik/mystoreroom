@@ -8,7 +8,7 @@ files_to_rename() {
 }
 files_to_rename
 
-echo -ne Ok to rename ./$oldprojname to ./$proj? '[Y/n] '
+printf "Ok to rename ./$oldprojname to ./$proj? [Y/n] "
 read answer
 if [ ! "$answer" ] || [[ $answer == [yY]* ]]; then
     mv -v ./$oldprojname ./$proj
