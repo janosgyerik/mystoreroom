@@ -1,4 +1,6 @@
 from datetime import timedelta
+from django.contrib.contenttypes.models import ContentType
+from django.core import urlresolvers
 
 from django.utils import timezone
 from django.db import models
@@ -34,6 +36,10 @@ class Tag(models.Model):
         if not self.label:
             self.label = self.name.title()
         super(Tag, self).save(*args, **kwargs)
+
+    def get_admin_url(self):
+        content_type = ContentType.objects.get_for_model(self.__class__)
+        return urlresolvers.reverse("admin:%s_%s_change" % (content_type.app_label, content_type.model), args=(self.id,))
 
 
 class ItemTag(models.Model):
