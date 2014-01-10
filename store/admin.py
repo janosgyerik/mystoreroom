@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from store.models import Item, Tag, ItemTag
+from store.models import Unit, Item, Tag, ItemTag
 
 
 class TagInline(admin.TabularInline):
@@ -21,7 +21,9 @@ class ItemAdmin(admin.ModelAdmin):
         return html
     tags.allow_tags = True
 
-    list_display = ('name', 'buy_dt', 'expires_dt', tags)
+    list_display = ('name', 'unit', 'number', 'buy_dt', 'expires_dt', tags)
 
+admin.site.register(Unit)
 admin.site.register(Tag)
+admin.site.register(ItemTag)
 admin.site.register(Item, ItemAdmin)

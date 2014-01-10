@@ -10,8 +10,26 @@ def tomorrow():
     return timezone.now() + timedelta(days=1)
 
 
+class Unit(models.Model):
+    name = models.SlugField()
+    label = models.CharField(max_length=20, blank=True)
+
+    def __unicode__(self):
+        return '%s (%s)' % (self.label, self.name)
+
+    def save(self, *args, **kwargs):
+        if not self.label:
+            self.label = self.name.title()
+        super(Unit, self).save(*args, **kwargs)
+
+    def get_admin_url(self):
+        content_type = ContentType.objects.get_for_model(self.__class__)
+        return urlresolvers.reverse("admin:%s_%s_change" % (content_type.app_label, content_type.model), args=(self.id,))
+
+
 class Item(models.Model):
     name = models.CharField(max_length=100)
+    unit = models.ForeignKey(Unit)
     number = models.IntegerField(default=1)
     buy_dt = models.DateTimeField(default=timezone.now)
     expires_dt = models.DateTimeField(default=tomorrow, null=True, blank=True)
