@@ -1,5 +1,5 @@
 """
-Django settings for mystock project.
+Django settings for mystoreroom project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'mystock.urls'
+ROOT_URLCONF = 'mystoreroom.urls'
 
-WSGI_APPLICATION = 'mystock.wsgi.application'
+WSGI_APPLICATION = 'mystoreroom.wsgi.application'
 
 
 # Database

@@ -5,7 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'mystock.views.home', name='home'),
+    # url(r'^$', 'mystoreroom.views.home', name='home'),
 
     url(r'^$', 'whitelist_auth.views.login', name='home'),
     url(r'^stock/', include('stock.urls')),

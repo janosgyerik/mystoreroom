@@ -1,7 +1,9 @@
-from mystock.settings import *
+from mystoreroom.settings import *
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.janosgyerik.com']
 
 DATABASES = {
     'default': {
