@@ -10,10 +10,30 @@ def tomorrow():
 
 class Item(models.Model):
     name = models.CharField(max_length=100)
+    number = models.IntegerField(default=1)
     buy_dt = models.DateTimeField(default=timezone.now)
     expires_dt = models.DateTimeField(default=tomorrow)
     created_dt = models.DateTimeField(default=timezone.now, blank=True)
     updated_dt = models.DateTimeField(default=timezone.now, blank=True)
 
+    def __unicode__(self):
+        return self.name
+
     class Meta:
         ordering = ('expires_dt',)
+
+
+class Tag(models.Model):
+    name = models.SlugField()
+    label = models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return '%s (%s)' % (self.label, self.name)
+
+
+class ItemTag(models.Model):
+    item = models.ForeignKey(Item)
+    tag = models.ForeignKey(Tag)
+
+    def __unicode__(self):
+        return '%s - %s' % (self.item, self.tag)
