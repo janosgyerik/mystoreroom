@@ -12,7 +12,7 @@ class Item(models.Model):
     name = models.CharField(max_length=100)
     number = models.IntegerField(default=1)
     buy_dt = models.DateTimeField(default=timezone.now)
-    expires_dt = models.DateTimeField(default=tomorrow)
+    expires_dt = models.DateTimeField(default=tomorrow, null=True, blank=True)
     created_dt = models.DateTimeField(default=timezone.now, blank=True)
     updated_dt = models.DateTimeField(default=timezone.now, blank=True)
 
