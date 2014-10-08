@@ -3,7 +3,7 @@ from mystoreroom.settings import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django.janosgyerik.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mystoreroom.janosgyerik.com']
 
 DATABASES = {
     'default': {
@@ -23,4 +23,7 @@ DATABASES = {
 }
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '__regenerate_this__'
+SECRET_KEY = 'b!&l+fuwi6db7hn@_^3dkfl=js=v4#ds5mqzt1)-sjzdp_wtvk'
+
+from whitelist_auth.auth import require_whitelisted_wrapper
+require_whitelisted_wrapper()
